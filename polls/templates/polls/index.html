@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
-    <link rel="stylesheet" href="{% static 'polls/lib/css/bootstrap.min.css' %}">
-    <title>Home Page</title>
-</head>
-<body>
-    <div style="background-color: black;">
-    <h1 align="center" style="font-weight: 900;color: yellow;">Loan Management System</h1>
-    </div>
-</body>
-</html>
+{% extends 'polls/base.html' %}
+
+{% block content %}
+    index page here
+{% endblock content %}

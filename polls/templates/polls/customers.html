@@ -1,0 +1,14 @@
+{% extends 'polls/base.html' %}
+
+
+{% block content %}
+<p>Recent Customers</p>
+
+<ul>
+    {% for person in customer_data %}
+    <li><a href="">{{ person.first_name }} {{ person.last_name }} <span class="badgde badge-pill badge-info">{{person.date_added}}</span> </a></li>
+    {% empty %}
+    <li>No Customer exists</li>
+    {% endfor %}
+</ul>
+{% endblock content %}

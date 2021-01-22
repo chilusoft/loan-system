@@ -13,7 +13,7 @@ class CustomerInformation(models.Model):
     user_name = models.CharField(max_length=255)
     user_id_num = models.IntegerField()
     DOB = models.DateField('Date of birth')
-    DOR = models.DateTimeField('Date of registration', auto_now_add=True)
+    date_added = models.DateTimeField(auto_now_add=True)
     phone = models.CharField(max_length=10)
 
     def __str__(self):
