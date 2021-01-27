@@ -1,0 +1,42 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+<p>
+    {{customer_info.first_name}} {{customer_info.last_name}}
+</p>
+
+{% if customer_info %}
+    <table class="table table-stripe">
+        <th>
+            table data
+        </th>
+        <tr>
+           <td>First Name</td> <td> {{customer_info.first_name}} </td>
+        </tr>
+        <tr>
+           <td>Last Name</td> <td> {{customer_info.last_name}} </td>
+        </tr>
+        <tr>
+           <td>Username</td> <td> {{customer_info.username}} </td>
+        </tr>
+        <tr>
+           <td>Email</td> <td> {{customer_info.first_name}} </td>
+        </tr>
+        <tr>
+           <td>Loan Requested/td> <td> {{loan_info.principal}} </td>
+        </tr>
+        <tr>
+           <td>Interest Rate</td> <td> {{loan_info.interest_rate}} </td>
+        </tr>
+        <tr>
+           <td>Amount Payable</td> <td> {{ loan_info.prinicipal * (loan_info.interest_rate + 1) }} </td>
+        </tr>
+        <tr>
+           <td>Loan Status</td> <td> {{ loan_info.status }} </td>
+        </tr>
+    </table>
+{% empty %}
+<p>No records exist</p>
+{% endif %}
+
+{% endblock content %}

@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from .models import CustomerInformation, LoanDetails, OccupationDetails
+from .models import Customer, Loan, Occupation
 
 # Register your models here.
 
-admin.site.register(CustomerInformation)
-admin.site.register(LoanDetails)
-admin.site.register(OccupationDetails)
+admin.site.register(Customer)
+admin.site.register(Loan)
+admin.site.register(Occupation)
